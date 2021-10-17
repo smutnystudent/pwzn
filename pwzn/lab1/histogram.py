@@ -1,3 +1,4 @@
+#Marta Kajkowska
 import argparse
 from ascii_graph import Pyasciigraph
 
@@ -19,7 +20,7 @@ try:
                 else:
                     dictionary[word] += 1
     dictionary = dict(sorted(dictionary.items(), reverse=True, key=lambda item: item[1]))
-    dictionary_tuple = [(k,v) for k, v in dictionary.items()]
+    dictionary_tuple = [(k, v) for k, v in dictionary.items()]
     histogram = Pyasciigraph()
     i = 0
     for line in histogram.graph('Wyrazy', dictionary_tuple):
