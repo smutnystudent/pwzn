@@ -12,9 +12,11 @@ req = requests.get('https://www.imdb.com/title/tt0773262/episodes?season=1')
 soup = BeautifulSoup(req.text, 'html.parser')
 episodes_list = soup.find('div', class_ = 'list detail eplist')
 episodes = episodes_list.find_all('div', class_ = 'list_item')
-with open(args.file + '.json', 'w') as f:
+with open(args.file + '.json', 'w') as file:
     for ep in episodes:
-        json.dump((ep.find('a').text.strip()), f)
+        json.dump((ep.find('a').text.strip()) + ':', file)
         episodes1 = ep.find_all('div', class_='info')
         for eps1 in episodes1:
-            json.dump((eps1.find('a').text.strip()), f)
+            json.dump((eps1.find('a').text.strip()), file)
+            file.write('\n')
+
