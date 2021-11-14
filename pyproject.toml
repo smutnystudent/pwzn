@@ -14,6 +14,7 @@ matplotlib = "^3.4.3"
 requests = "^2.26.0"
 beautifulsoup4 = "^4.10.0"
 bs4 = "^0.0.1"
+selenium = "^4.0.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
