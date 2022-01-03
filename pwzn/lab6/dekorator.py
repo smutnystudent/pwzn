@@ -16,7 +16,7 @@ def decorator(repeat = 1):
                 function(*args, **kwargs)
                 t2 = time()
                 sum_time += (t2 - t1)
-            print("średni czas wykonywania funkcji: ", sum_time/repeat)
+            print("średni czas wykonywania funkcji: ", sum_time/repeat, "s")
         return wrapper
     return inner
 
