@@ -1,5 +1,4 @@
 import requests
-import os
 from PIL import Image
 from bs4 import BeautifulSoup
 from concurrent.futures import ProcessPoolExecutor
