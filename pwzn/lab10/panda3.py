@@ -3,9 +3,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 cd = pd.read_csv('owid-energy-data.csv')
-cdpkb = cd.fillna(0).groupby('country').agg(suma_pkb=('gdp', np.sum))
-print('Suma PKB na przestrzeni lat:')
-print(cdpkb)
+cdwegiel = cd.fillna(0).groupby('country').agg(wegiel=('coal_consumption', np.sum))
+print('Sumaryczne zużycie węgla na przestrzeni lat:')
+print(cdwegiel)
 wbr = cd.loc[cd['country']=='United Kingdom']
 fra = cd.loc[cd['country']=='France']
 nie = cd.loc[cd['country']=='Germany']
