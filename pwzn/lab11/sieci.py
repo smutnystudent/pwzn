@@ -1,7 +1,7 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 
-graph = nx.read_edgelist("3980.edges")
+graph = nx.read_edgelist("107.edges")
 plt.hist([val for (node, val) in graph.degree()])
 plt.show()
 subgraph = [graph.subgraph(c).copy() for c in nx.connected_components(graph)]
